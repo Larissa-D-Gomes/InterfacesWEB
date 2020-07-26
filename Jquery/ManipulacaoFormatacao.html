@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        //Equiavalente window onload
+        $( document ).ready(function() {
+
+            //Aplicacao em cascata nos metodos
+            $('#caixa')
+                .html("<p>Ola</p> <p>Ola</p>")
+                .css({//objeto css
+                    'background-color': 'yellow',
+                     height: "100px",
+                    });
+            $('#btn').click(function(){
+                $("#caixa").addClass("vermelho");//adiciona a classe
+               // $("#caixa").css("height");//extrair informacao
+            });
+            $('#btn2').click(function(){
+                $("#caixa").removeClass("vermelho");//remove a classe
+            });
+            $('#btn3').click(function(){
+                $("#caixa").toggleClass("vermelho");//muda a classe
+                //hasClass
+            });
+        });
+      </script>
+
+      <style>
+          .vermelho{
+            background-color: red!important;
+            height: 100px;
+          }
+      </style>
+</head>
+<body>
+    <div id='caixa'></div>  
+    <p><button id="btn">Ativar Classe</button></p>
+    <p><button id="btn2">Remover Classe</button></p>
+    <p><button id="btn3">Inverte Classe</button></p>
+</body>
+</html>

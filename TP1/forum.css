@@ -1,0 +1,439 @@
+
+/*Formatacao header - Inicio*/
+.header{
+    background-image: url(img/header2.jpg);
+}
+
+.logo{
+    max-width: 150px;
+}
+
+.menuHeader{
+    color: rgb(190, 163, 94);
+    font-size: 10px;
+    padding: 0px;
+    padding-left: 0px;
+}
+
+.menuHeader a{
+    color: rgb(190, 163, 94);
+    font-size: 10px;
+    padding: 4px;
+    padding-left: 0px;
+}
+
+.menuHeader a:hover{
+    color: rgb(104, 97, 78);
+}
+
+.buttonHeader button{
+    color: rgb(190, 163, 94);
+    font-size: 10px;
+    padding: 3px;
+}
+
+.buttonHeader{
+    padding-top: 70px;
+    padding-left: 5px;
+}
+
+.form-inline  {
+    float: right;
+}
+
+.barNav a {
+    color: rgb(182, 146, 55);
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    color:  #fff;
+    background-color :  rgb(182, 146, 55);
+} 
+
+
+.form-inline .buttonMenu{
+    color: rgb(182, 146, 55);
+    padding: 3px;
+    font-size: 10px;
+}
+
+.form-inline .pesq{
+    padding: 0px;
+}
+
+
+.form-inline input{
+   width:115px!important;
+}
+
+/*Formatacao header - Fim*/
+
+/*Formatacao carousel - Inicio*/
+
+.fixedHeightImg > img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel{
+    width: 100%;
+    margin-bottom: 10px;
+}
+/*Formatacao carousel - Fim*/
+.carousel1 p{
+    background-color:rgba(0,0,0,0.7) ;
+}
+
+.carousel1 h5{
+    background-color:rgba(0,0,0,0.7) ;
+}
+/*Formatacao main - Inicio*/
+
+
+.Myalert{
+    position:relative;
+    padding:.75rem 1.25rem;
+    margin-bottom:1rem;
+    border: 1px solid transparent;
+    border-radius :.25rem;
+    color: rgb(182, 146, 55);
+    background-image: url(img/header2.jpg);
+    border-color:black;
+} 
+
+
+main{
+    margin-top: 10px;
+}
+
+.card .fixedHeightImg > img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+.card-body a{
+    color: rgb(182, 146, 55)!important;
+}
+
+.sideMenu .card-body .card-text{
+    font-size: 10px!important;
+    margin: 2px;
+    padding: 2px;
+}
+
+.sideMenu .card-body .card-title{
+    font-size: 13px!important;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.sideMenu .card-body a{
+    font-size: 10px!important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sideMenu .card-body {
+    margin: 0px;
+    padding: 5px;
+}
+
+.sideMenu .cardComponent {
+    margin: 0px;
+}
+
+.sideMenu .card{
+    margin-top: 10px;
+}
+/*Menu Mobile - Inicio*/
+
+#menuToggle{
+    display: none;
+}
+
+.menuIcon{
+    display: none;
+}
+
+.lastNews .card{
+    margin-bottom: 15px;
+}
+
+.lastNews .card-body{
+    padding: 10px!important;
+    margin: 0px!important;
+}
+.lastNews .card-body p{
+    font-size: 15px;
+}
+
+.lastNews img {
+    object-fit: cover;
+    width: 100%;
+    height: 170px;
+}
+
+.albumArea .album{
+    margin-top: 25px;
+}
+
+.albumArea h1{
+    font-size: 15px;
+}
+
+.sideMenu iframe{
+    margin-top: 30px;
+}
+
+/*Carousel Singles*/
+.single img{
+    width: 130px;
+}
+
+/*Formatacao main - Fim*/
+
+
+/*Fomatacao footer - inicio*/
+.footer{
+    background-image: url(img/header2.jpg);
+    color: rgb(182, 146, 55);
+    text-align: center;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+.footer h1{
+    font-size: 20px;
+}
+
+.navFooter a{
+    display: block;
+    color: rgb(182, 146, 55);
+}
+
+.footer h2{
+    font-size: 20px;
+}
+
+.footer i{
+    font-size: 30px;
+    margin: 10px;
+}
+
+/*Fomatacao footer - fim*/
+
+@media screen and (max-width: 767px){
+
+    .header{
+        width: 100%;
+        top: 0px;
+        position: fixed;
+        z-index: 998;
+        
+    }
+
+    .BarraNav a{
+        font-size: 15px;
+        padding: 5px;
+        margin: 4px;
+    }
+
+    .logo{
+        max-width: 90px;
+    }
+
+    .form-inline{
+        display: none;
+    }
+
+    .header menu{
+        display: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .menu{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+
+        /*Ocupar a tela toda*/
+        width: 100%;
+        height: 0%;
+        background-color: rgba(0,0,0,0.7);
+        overflow: hidden;
+        z-index: 998;
+        
+        /*Alterar para outros browser*/
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -o-transition: height 0.3s;
+        transition: height 0.3s ;
+        
+    }
+
+    .menu a{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        margin: 10px;
+    }
+    
+    .menu a:first-child{
+        margin-top: 80px;
+    }
+    .menu .buttonHeader button{
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        margin: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .menuIcon{
+        display: block;
+    }
+
+    .menuIcon{
+        display: block;
+        width: 50px;
+        height: inherit;
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        line-height: 60px;
+        z-index: 999;
+    }
+
+    .menuIcon i{
+        font-size: 4em;
+    }
+
+    /*Quando o menu Toggle estiver marcado, pega o label mais proximo, pega o icone da posicao 2
+    */
+    #menuToggle:checked ~ label i:nth-child(2){
+        display: block;
+    }
+
+
+    #menuToggle:checked ~ label i:first-child{
+        display: none;
+    }
+
+    #menuToggle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #menuToggle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+
+    #menuToggle:checked ~ nav{
+        height: 100%;
+    }
+
+    .main{
+        margin-top: 100px;
+    }
+
+    .carousel p{
+        font-size: 8px;
+    }
+    
+    .carousel h5{
+        font-size: 10px;
+    }
+
+    .imgcard1{
+        max-width: 100px;
+    }
+    
+    .fixedHeightImg > img {
+        object-fit: cover;
+        width: 100%;
+        height: 350px;
+    }
+
+    .sideMenu div{
+        display: none;
+    }
+
+    .lastNews small{
+        font-size: 7px;
+        margin: 0px;
+    }
+
+    .lastNews h5{
+        font-size: 15px;
+        margin: 0px;
+    }
+
+    .lastNews p{
+        font-size: 12px!important;
+    }
+
+    .lastNews a{
+        font-size: 9px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .lastNews .card-body{
+        padding: 5px!important;
+        margin: 5px!important;
+    }
+    .lastNews img {
+        object-fit: cover;
+        width: 100%;
+        height: 100px;
+    }
+    
+    /*Carousel Singles*/
+    .single img{
+        width: 90px;
+    }
+
+    .footer{
+        background-image: url(img/header2.jpg);
+        color: rgb(182, 146, 55);
+        text-align: center;
+        font-size: 10px!important;
+        padding-top: 20px;
+    }
+    
+    .footer h1{
+        font-size: 13px;
+    }
+
+    .footer h2{
+        font-size: 13px;
+    }
+
+    .footer i{
+        font-size: 20px;
+    }
+
+
+
+    .footer .Pag{
+        display: none;
+    }
+
+
+}
+
+/*Menu Mobile - Fim*/
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    .form-inline{
+        display: none;
+    }
+    
+}

@@ -1,0 +1,50 @@
+.header{
+    background-color: aqua;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 5em;
+}
+.header_area{
+    padding: 20px;
+}
+
+.menu_area{
+    margin-top: 30px;
+}
+
+.menu_area nav a{
+   background-color: hotpink;
+   color:white;
+}
+
+/*Mudar de cor quando passar o mouse por cima*/
+.menu_area nav a:hover{
+    background-color: tomato;
+ }
+
+.active{
+    /*Mai importante que a declaracao do bootstrap*/
+    background-color: violet !important;
+}
+
+.main{
+    background-color: blue;
+}
+
+.main .card{
+    margin-bottom: 15px;
+}
+.footer{
+    margin-top: 20px;
+    background-color: aqua;
+}
+
+.footer_area{
+    padding: 20px;
+    text-align: center;
+}
+
+.logo{
+    max-width: 200px;
+}
+

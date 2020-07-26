@@ -1,0 +1,21 @@
+
+.contador {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    font-size: 18pt;
+  }
+  
+  .contador .valor {
+    flex: 1;
+    text-align: right;
+    border: #e0e0e0 thin solid;
+    padding: 3px;
+  }
+  
+  .contador button {
+    margin-left: 1ex;
+    width: 35px;
+    height: 35px;
+  }
+  

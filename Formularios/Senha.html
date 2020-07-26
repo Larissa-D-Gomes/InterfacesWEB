@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teste</title>
+    <meta charset="utf-8">
+    <script>
+        window.onload = () => {
+            // <!--Ocorre quando for confimada a mudanca-->
+            nome.onchange = () => {
+                console.log("change", nome.value);
+            };
+
+            //<!--Ocorre em qualquer mudanca-->
+            nome.oninput = () => {
+                let invalidChar = "!@#$%^&*)(";
+                //Metodo indexOf() contas quantos carcteres do parametros tem, se nao tiver valor-1
+                if (invalidChar.indexOf(nome.value.charAt(nome.value.length - 1)) > 0)
+                    nome.value = nome.value.substr(0, nome.value.length - 1);
+            };
+
+            //Quando o campo recebe o foco
+            nome.onfocus = () => { 
+                Instrucoes.innerHTML = "Informe o seu nome";
+                Instrucoes.style.color ="yellow";
+            }
+            //Quando o campo perde o foco
+            nome.onblur = () => {
+                if(nome.value.length == 0){
+                    Instrucoes.innerHTML = "Erro";
+                    Instrucoes.style.color = "red";
+                }
+                else
+                    Instrucoes.innerHTML = "";
+            }
+            var a = document.querySelector('input').value;
+            console.log("a",a);
+        }
+    </script>
+</head>
+
+<body>
+    <!--Enviar dados para um aquivo php-->
+    <form action="login.php" method="post">
+        <p>
+            <!--Rotulo do input nome-->
+            <label for="nome" >Nome:</label>
+            <!--autocomplete off -> nao mostrar aba de opcoes ja digitadas-->
+            <input type="text" id="nome" name="nome" autocomplete="off" value="123" />
+            <spam id="Instrucoes"></spam>
+        </p>
+
+        <p>
+            <!--type password -> nao aparece os digitos-->
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" />
+        </p>
+
+        <p>
+            <!--Botao para enviar form para arquivo php -> type submit-->
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+</body>
+
+</html>

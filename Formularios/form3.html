@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teste</title>
+    <meta charset="utf-8">
+    <script>
+        window.onload = () => {
+            //evento disparado com um botao do tipo submit
+            login.onsubmit = () =>{
+                console.log({nome: nome.value, senha: senha.value});
+                if(nome.value.length == 0 || senha.value.length == 0){
+                    alert("Campos nao podem ficar em branco");
+                    return false;
+                }
+                else    
+                    return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--Enviar dados para um aquivo php-->
+                     <!--post-> dados nao aparecem na url get -> dados aparecemna url-->
+    <form id="login" method="post" action="https://postman-echo.com/post">
+        <p>
+            <!--Rotulo do input nome-->
+            <label for="nome">Nome:</label>
+            <!--autocomplete off -> nao mostrar aba de opcoes ja digitadas-->
+            <input type="text" id="nome" name="nome" autocomplete="off" />
+            <spam id="Instrucoes"></spam>
+        </p>
+
+        <p>
+            <!--type password -> nao aparece os digitos-->
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" />
+        </p>
+        
+        <p>
+            <label for="conectado">Permanecer conectado?</label>
+            <input type="checkbox" id="conectado" name="nconectado">
+        </p>
+
+        <p>
+            <button id="btnsubmit" type="submit">Enter</button>
+        </p>
+    </form>
+</body>
+
+</html>

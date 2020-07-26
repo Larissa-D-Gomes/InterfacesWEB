@@ -1,0 +1,67 @@
+/*Criar uma regra para todos os elementos*/
+* {
+    margin: 0px;
+    padding: 0x;
+  }
+  
+  .cabecalho {
+    background-color: greenyellow;
+    height: 200px;  
+  }
+   
+  .conteudo{
+   background-color: coral;
+   height: 400px;
+   width: 60%;
+   float:left;
+   margin: 10px;
+  }
+  
+  .barra-lateral{
+   background-color: aqua;
+   height: 400px;
+   width: 35%;
+   float: left;
+  }
+  
+  /*  Componente BOX-NOTICIA  */
+.box-noticia {
+    position: relative;
+
+    /*Impedir que elementos flutuem entre sim*/
+    clear: both;
+    margin: 15px 0px;
+    overflow: auto;
+}
+  
+.box-noticia img {
+    float: left; 
+    margin: 0 10px;
+    
+}
+  
+  
+.box-noticia > h3, .box-noticia > h4  {
+    margin: 0px;
+}
+  
+.box-noticia .icone {
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 5px;
+}
+ 
+.box-noticia .texto {
+    margin-top: 10px;
+}
+ 
+.box-noticia .barra-icones {
+    /*Elemento sai do fluxo e pode posicionar onde quiser no absolute
+    * relative fica restrito ao seu elemento*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+

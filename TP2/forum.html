@@ -1,0 +1,691 @@
+<!--Nome: Larissa Domingues Gomes
+    Matricula: 650525
+    Atividade: Portal de noticas
+    Disciplina: Desenvolvimento de Interfaces Web
+    PUC-MG  
+  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Forum Coldplay</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="forum.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header class="container header">
+
+    <div class="row">
+      <div class="col-5 col-sm-7 col-md-8 col-lg-10">
+        <img src="img/logo.png" class="logo">
+      </div>
+
+      <div class="col-7 col-sm-5 col-md-4 col-lg-2 float-right">
+
+        <div class="menuHeader">
+          <nav>
+            <input type="checkbox" id="menuToggle">
+
+            <!--Criar um label que controla o checkbox o for faz a ligacao entre os dois-->
+            <label for="menuToggle" class="menuIcon">
+              <!--Icone de menu-->
+              <i class="fa fa-bars"></i>
+              <i class="fa fa-times-circle"></i>
+            </label>
+
+            <nav class="nav nav-pills flex-column flex-sm-row menu">
+              <a class="flex-sm-fill text-sm-center nav-link" href="#">Inscreva-se</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="#">Registros</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="#">Log In</a>
+
+              <div class="buttonHeader">
+                País:
+                <button type="button" class="btn btn-outline-warning buttonMenu">Bra</button>
+                <button type="button buttonMenu" class="btn btn-outline-warning buttonMenu">Arg</button>
+                <button type="button buttonMenu" class="btn btn-outline-warning buttonMenu">Ger</button>
+                <button type="button buttonMenu" class="btn btn-outline-warning buttonMenu">Usa</button>
+              </div>
+            </nav>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row BarraNav">
+      <div class="col-sm-11 col-md-8 col-lg-8 barNav">
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Membros</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Chris Martin</a>
+              <a class="dropdown-item" href="#">Guy Berryman</a>
+              <a class="dropdown-item" href="#">Jonny Buckland</a>
+              <a class="dropdown-item" href="#">Will Champion</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Álbuns</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Parachutes</a>
+              <a class="dropdown-item" href="#">A Rush Of Blood To The Head</a>
+              <a class="dropdown-item" href="#">X&Y</a>
+              <a class="dropdown-item" href="#">Viva La Vida</a>
+              <a class="dropdown-item" href="#">Mylo Xyloto</a>
+              <a class="dropdown-item" href="#">Ghost Stories</a>
+              <a class="dropdown-item" href="#">A Head Full Of Dreams</a>
+              <a class="dropdown-item" href="#">Everyday Life</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Tours</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Parachutes</a>
+              <a class="dropdown-item" href="#">A Rush Of Blood To The Head</a>
+              <a class="dropdown-item" href="#">Twisted Logic</a>
+              <a class="dropdown-item" href="#">Viva La Vida</a>
+              <a class="dropdown-item" href="#">Mylo Xyloto</a>
+              <a class="dropdown-item" href="#">Ghost Stories</a>
+              <a class="dropdown-item" href="#">A Head Full Of Dreams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Loja</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-12 col-md-4 col-lg-4 float-right">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2 pesq" type="search" placeholder="Search" aria-label="Search">
+          <button type="button" class="btn btn-outline-warning buttonMenu">Search</button>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="container main">
+    <div class="row" id="carousel">
+      <div class="col-12">
+        <div id="carouselExampleCaptions" class="carousel slide carousel2 carousel1" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active fixedHeightImg ">
+              <img src="img/banner.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-block d-md-block">
+                <h5>Escute ao novo álbum da banda 'Everyday Life'!</h5>
+                <p>No dia 22 de novembro de 2019, a banda lançou seu mais novo disco.</p>
+              </div>
+            </div>
+            <div class="carousel-item fixedHeightImg">
+              <img src="img/coldplay2.jpg.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-block d-md-block">
+                <h5>Coldplay anuncia que não haverá tour em nova era.</h5>
+                <p>Chris Martin afirmou em entrevista que banda vai trabalhar nos próximos anos para tentar criar shows
+                  que sejam sustentáveis e ativamente benéficos..</p>
+              </div>
+            </div>
+            <div class="carousel-item fixedHeightImg">
+              <img src="img/instruments.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-block d-md-block">
+                <h5>Assista ao clipe de 'Orphans'!</h5>
+                <p>O primeiro single da era 'Everyday Life' veio acompanhado de um belíssimo clipe, com cenas gravadas
+                  durante a producação do álbum.</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="newsP">
+
+      <div class="col-12 col-sm-12 col-md-7 col-lg-8">
+
+        <div class="card mb-3 cardComponent" id="destaque" style="max-width: 600x;">
+          <div class="row no-gutters">
+            <div class="col-md-6 fixedHeightImg">
+              <img src="img/vinil.jfif" class="card-img" alt="...">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <small>22 out 2019</small>
+                <h5 class="card-title">Vinil Edição Limitada</h5>
+                <p class="card-text">A banda lançou em seu site oficial uma edição limitada do álbum 'Everyday Life' com
+                  a cor prata!</p>
+                <a href="#">Ler mais.</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="Myalert">
+          Últimas notícias:
+          <button type="button" id="btn1" class="btn btn-outline-warning buttonMenu">Início</button>
+          <button type="button" id="btn2" class="btn btn-outline-warning buttonMenu">Esporte</button>
+          <button type="button" id="btn3" class="btn btn-outline-warning buttonMenu">Internacional</button>
+          <button type="button" id="btn4" class="btn btn-outline-warning buttonMenu">COVID-19</button>
+          <button type="button" id="btn5" class="btn btn-outline-warning buttonMenu">Música</button>
+
+        </div>
+
+        <div class="row lastNews" id="ln">
+
+          <div class="col-6">
+            <div class="card" style="max-width: 360px;">
+              <div class="card-body">
+                <small>09 de março 2020</small>
+                <h5 class="card-title">Coldplay no Tiny Desk</h5>
+              </div>
+              <img src="img/tinydesk.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Chris Martin e Jonny Buckland tocam músicas e fazem cover de Prince no programa
+                  Tiny Desk.</p>
+                <a href="#">Ler mais.</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card" style="max-width: 360px;">
+              <div class="card-body">
+                <small>09 de março 2020</small>
+                <h5 class="card-title">Coldplay no Tiny Desk</h5>
+              </div>
+              <img src="img/quarentena.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Chris Martin e Jonny Buckland tocam músicas e fazem cover de Prince no programa
+                  Tiny Desk.</p>
+                <a href="#">Ler mais.</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card" style="max-width: 360px;">
+              <div class="card-body">
+                <small>09 de março 2020</small>
+                <h5 class="card-title">Daddy</h5>
+              </div>
+              <img src="img/daddy2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">O clipe de 'Daddy' ganhou o prêmio de 'Melhor Vídeo de Música' no British Animation
+                  Awards.</p>
+                <a href="#">Ler mais.</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card" style="max-width: 360px;">
+              <div class="card-body">
+                <small>12 de março 2020</small>
+                <h5 class="card-title">Trouble in Town</h5>
+              </div>
+              <img src="img/tit.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Coldplay faz crítica social em novo vídeo inpirado no livro de George Owen,
+                  'Revolução dos Bichos'.</p>
+                <a href="#">Ler mais.</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="Myalert">
+          Singles:
+        </div>
+
+        <div id="carouselExampleControls" class="carousel slide carousel3" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row albumSingle">
+
+                <div class="col-2 single">
+                  <img src="img/Shiver_cover_art.jfif" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/yellow.jfif" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/trouble.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/DontPanic1.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/gpasuyf.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/Clocks_single.jpg" class="card-img" alt="...">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row albumSingle">
+
+                <div class="col-2 single">
+                  <img src="img/In_My_Place.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/Coldplay_speedofsound.png" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/fixyou.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/TheHardestPart.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/Coldplay_-_Talk.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/Coldplay_-_Viva_la_Vida.jpg" class="card-img" alt="...">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row albumSingle">
+
+                <div class="col-2 single">
+                  <img src="img/Lovers_in_Japan.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/Lost-Cover.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/paradise.jfif" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/Coldplaycharliebrown.jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/Coldplay_-_Hurts_Like_Heaven_(promocional).jpg" class="card-img" alt="...">
+                </div>
+
+                <div class="col-2 single">
+                  <img src="img/asfos.jpg" class="card-img" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-5 col-lg-4 sideMenu">
+
+        <div class="Myalert">
+          Vídeos:
+        </div>
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card mb-3 cardComponent " style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/cotw.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Champion Of The World</h5>
+                      <p class="card-text">Assista ao clipe de 'Champion of The World'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 cardComponent " style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/orphans.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Orphans</h5>
+                      <p class="card-text">Assista ao clipe de 'Orphans'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 cardComponent " style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/cry.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Cry Cry Cry</h5>
+                      <p class="card-text">Assista ao clipe de 'Champion of The World'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card mb-3 cardComponent" style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/daddy.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Daddy</h5>
+                      <p class="card-text">Assista ao clipe de 'Daddy'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 cardComponent" style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/troubleintown.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Trouble In Town</h5>
+                      <p class="card-text">Assista ao clipe de 'Trouble In Town'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 cardComponent" style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/sjlt.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Something Just Like This</h5>
+                      <p class="card-text">Assista ao clipe de 'Something Just Like This'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card mb-3 cardComponent" style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/upandup.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Up&Up</h5>
+                      <p class="card-text">Assista ao clipe de 'Up&Up'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 cardComponent" style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/hftw.jfif" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Hymn For The Weekend</h5>
+                      <p class="card-text">Assista ao clipe de 'Hymn For The Weekend'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 cardComponent" style="max-width: 600x">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img src="img/everydalife.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Everyday Life</h5>
+                      <p class="card-text">Assista ao clipe de 'Everyday Life'!</p>
+                      <a href="#">Ler mais.</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <div class="player">
+          <iframe src="https://open.spotify.com/embed/artist/4gzpq5DPGxSnKTe4SA8HAU" width="350" height="80"
+            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+
+        <div class="row albumArea">
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/Parachutes.jpg" class="card-img" alt="...">
+              <h1>Parachutes</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/A_Rush_of_Blood_to_the_Head.jpg" class="card-img" alt="...">
+              <h1>AROBTTH</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/xy.jpg" class="card-img" alt="...">
+              <h1>X&Y</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/vlv.jpg" class="card-img" alt="...">
+              <h1>Viva La Vida</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/mx.jpg" class="card-img" alt="...">
+              <h1>Mylo Xyloto</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/gs.jpg" class="card-img" alt="...">
+              <h1>Ghost Stories</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/ahfod.jpg" class="card-img" alt="...">
+              <h1>A Head Full Of Dreams</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/tbfp.jpg" class="card-img" alt="...">
+              <h1>The Butterfly Package</h1>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="album">
+              <img src="img/el.jpg" class="card-img" alt="...">
+              <h1>Everyday Life</h1>
+            </div>
+          </div>
+
+        </div>
+        <iframe width="370" height="260" src="https://www.youtube.com/embed/aKlwJROuo-Q" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+      </div>
+
+
+    </div>
+
+
+
+  </main>
+
+  <footer class="footer container">
+    <div class="row">
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <h1>Sobre o Forum</h1>
+        <p>Portal de notícias sobre o mundo, música, esportes e muito mais...
+        </p>
+      </div>
+
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 Pag">
+
+        <h1>Páginas</h1>
+        <div class="row">
+
+          <div class="col-4">
+            <nav class="navFooter">
+              <a href="#">Site da banda</a>
+              <a href="#">Loja</a>
+              <a href="#">Novidades</a>
+            </nav>
+          </div>
+
+          <div class="col-4">
+            <nav class="navFooter">
+              <a href="#">Instagram</a>
+              <a href="#">Twitter</a>
+              <a href="#">Facebook</a>
+            </nav>
+          </div>
+
+          <div class="col-4">
+            <nav class="navFooter">
+              <a href="#">Promoções</a>
+              <a href="#">Vídeos</a>
+              <a href="#">Contatos</a>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <a href="https://twitter.com/intent/tweet?screen_name=ForumColdplay&ref_src=twsrc%5Etfw"
+          class="twitter-mention-button" data-show-count="false">Tweet to @ForumColdplay</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <h2>Siga-nos</h2>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-facebook-square"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        Todos direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

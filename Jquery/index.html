@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Demo</title>
+  <meta charset="utf-8">
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    //Equiavalente window onload
+    $( document ).ready(function() {
+        //seleciona todos a
+        $( "a" ).click(function(evt) {
+          alert( "O link não funcionará mais." );
+          //Impedir comportamento padrao
+          evt.preventDefault();
+        });
+    });
+  </script>
+</head>
+<body>
+  <p><a href="http://jquery.com/">jQuery</a></p>
+</body>
+</html>

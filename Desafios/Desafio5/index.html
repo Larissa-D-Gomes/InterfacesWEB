@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+
+	<div id="tela"></div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    function exibeFilmes () {
+      let tela = document.getElementById ('tela');
+      let textoHTML = '';
+
+
+      $.ajax ({
+        url: 'https://api.themoviedb.org/3/movie/popular',
+        method: 'GET',
+        data: {
+          api_key: '9c2c75d9d67c3f98cc98bb29450115c5'
+        },        
+      }).done (function (data) {        
+        
+        // Monta o texto HTML
+        for (i=0; i < data.results.length; i++) {
+          let imagemFilme = 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path;
+          let tituloFilme = data.results[i].title;
+          let sinopseFilme = data.results[i].overview;
+
+          textoHTML += `<div class="box-imagem">
+              <img src="${imagemFilme}">
+              <h3>${tituloFilme}</h3><p>${sinopseFilme}</p></div>`;
+
+        }
+
+        // Mostrar o código na div tela
+        tela.innerHTML = textoHTML    
+
+      });    
+    }
+
+    window.addEventListener ('load', function () {
+      exibeFilmes ();
+    });
+	</script>
+</body>
+
+</html>

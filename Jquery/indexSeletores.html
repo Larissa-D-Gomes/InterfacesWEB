@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Seletores</title>
+  <meta charset="utf-8">
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    //Equiavalente window onload
+    $( document ).ready(function() {
+        //Selecionar com seletor css
+        $("#btn").click(function(){
+            console.log("Ola mundo");
+        })
+
+        //alterar propriedade css
+        $('h1', 'h2').css('background-color','#ffcccc');
+        //li pares
+        $('li:even').css('background-color','#ffcccc');
+        //Atributos que tenham en
+        //$('[lang="en"]').css('font-style','italic');
+        $(':lang("en")').css('font-style','italic');
+    });
+  </script>
+</head>
+<body>
+  <p><button id="btn">Ola mundo</button></p>
+  <h1>Teste</h1>
+  <h2>Teste</h2>
+  <ul>
+      <li class="primeiro">Testes com seletores</li>
+      <li>Teste de conteudo</li>
+      <li lang="en">CSS manipulation </li>
+      <li>Teste alteracao</li>
+  </ul>
+</body>
+</html>

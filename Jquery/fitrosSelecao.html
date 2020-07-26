@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+            //Apenas o primeiro elemento que contem lista
+            $(".lista").first().addClass("marcado");
+            
+            //elementos que tem descedente
+            $(".lista").has("em").addClass("marcado");
+
+            //aplicado ao proprio elemento
+            //Add adiciona um elemento a selecao
+            $(".lista").filter(".teste").add('#Titulo').addClass("marcado2");
+                                   
+                                    //map: para cada elemento do conjunto
+                                    //utiliza uma funcao que irá retornar um outro valor
+            let lista = $(".lista").map(function(){
+                return $(this).attr("id");
+            }).get();//get transforma algo jquerry em javasrcipt
+            console.log(lista);
+        });
+    </script>
+    
+    <style>
+        .marcado{
+            background-color: red;
+        }
+        .marcado2{
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="Titulo">Title</h1>
+    <ul>
+        <li class="lista" id="l1">item 1</li>
+        <li class="lista teste" id="l2">item 2</li>
+        <li class="lista teste" id="l3">item 3</li>
+        <li class="lista" id="l4"><em>item 4</em></li>
+        <li class="lista" id="l5">item 5</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,210 @@
+html{
+    height: 100%;
+}
+
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    font-size: 120%;
+    text-align: center;
+}
+
+img{
+    /*Imagens acompanhar aumento ou diiminuição da tela*/
+    max-width: 100%;
+
+    display: block;
+}
+
+/*Itens em linhas*/
+.header{
+    background-color: #727272;
+    display: flex;
+    
+    /*Quebrar linha quando nao ha tamanho para mostrar informacoes*/
+    flex-wrap: wrap;
+    
+    /*Espaco entre componentes*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer{
+    background-color: #727272;
+    display: flex;
+    
+    /*Quebrar linha quando nao ha tamanho para mostrar informacoes*/
+    flex-wrap: wrap;
+    
+    /*Espaco entre componentes*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+/*Itens em linha*/
+.menu{
+    display: flex;
+}
+
+/*Remover a bolinha*/
+.menu li{
+    list-style: none;
+    margin-left: 10px;
+}
+
+/*CSS Menu Mobile - Inicio */
+
+#menuToggle{
+    display: none;
+}
+
+.menuIcon{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .header{
+        /*Sempre que houver rolagem o menu fica fixo*/
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+
+    .header nav{
+        display: absolute;
+        /*Quando selecionado o menu precisa ocupar a tela toda*/
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+
+        /*Ocupar a tela toda*/
+        width: 100%;
+        height: 0%;
+        background-color: rgba(0,0,0,0.7);
+        overflow: hidden;
+
+        /*Alterar para outros browser*/
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -o-transition: height 0.3s;
+        transition: height 0.3s ;
+    }
+
+    .menu li{
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .menu li a{
+        display: block;
+        text-align: center;
+    }
+
+    .menuIcon{
+        display: block;
+        color: white;
+        width: 50px;
+        height: inherit;
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        line-height: 60px;
+        z-index: 999;
+    }
+
+    .menuIcon i{
+        font-size: 1.7em;
+    }
+
+    /*Quando o menu Toggle estiver marcado, pega o label mais proximo, pega o icone da posicao 2
+    */
+    #menuToggle:checked ~ label i:nth-child(2){
+        display: block;
+    }
+
+
+    #menuToggle:checked ~ label i:first-child{
+        display: none;
+    }
+
+    #menuToggle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #menuToggle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+
+    #menuToggle:checked ~ ul{
+        height: 100%;
+    }
+
+}
+
+/*CSS Menu Mobile - FIM*/
+
+
+/*CSS Grid - Inicio*/
+    .grid{
+        display: grid;/*Transformar em sistema de grid*/
+        grid-template-columns: 1fr 1fr 1fr;/*3 fracoes de colunas com fracoes iguais*/
+        /*grid-template-columns: repeat(3, 1fr);/*3 fracoes de colunas com fracoes iguais*/
+        /*grid-template-columns: 1fr 1fr 5fr;*/
+
+        grid-gap: 20px;/*Separacoes entre colunas*/
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;/*Uma fracao par foto outra para legenda*/
+        align-items: center;
+        grid-gap: 10px;
+    }
+
+    .banner{
+        grid-column: 3;
+        grid-row: 2/4;
+    }
+
+    @media screen and (max-width: 600px){
+        .grid{
+            grid-template-columns: 1fr 1fr;/*3 fracoes de colunas com fracoes iguais*/
+        }
+        
+        .card{
+            display: block;
+        }
+        /*Nao mostrar nono filho*/
+        .card:nth-child(9){
+            display: none;
+        }
+        .banner{
+            display: none;
+        }
+    }
+/*CSS Grid - Fim*/

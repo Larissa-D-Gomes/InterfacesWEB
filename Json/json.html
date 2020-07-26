@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+
+    <script>
+        //Por definicao tudo que vai para rede eh em formato string
+        let usuario = {
+            //json permite o nome com espaco, mas nao eh uma boa pratica
+            "nome do usuario": "Larissa",
+            "senha": "1234",
+        };
+
+        let str = JSON.stringify(usuario);//Gerar string com obj json
+        console.log("Gerador de string:", str);
+        console.log(typeof str);
+        console.log("usuario1 ", usuario);
+        console.log("usuario1 ", typeof usuario);
+
+        let usuario2 = JSON.parse(str);// criar objeto com parse do json
+        console.log("usuario2 ", usuario2);
+        console.log("usuario2 ", typeof usuario2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

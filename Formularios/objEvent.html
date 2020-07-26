@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teste</title>
+    <meta charset="utf-8">
+    <script>
+        let trataEvento = (evento) => {
+            let lista = document.querySelectorAll('#imagens > img');
+
+            //passar por cada elemento do vetor
+            lista.forEach((item) => {
+                item.style.border = 'none';
+            });
+            console.log(`${evento.type} em ${evento.target.alt}`);
+            evento.target.style.border = 'thick black solid ';
+            selecionada.innerHTML = 'Selecionada: '+evento.target.alt;
+        }
+
+        window.onload = () => {
+            //Selecionar todos img filhos de #imagens
+            let lista = document.querySelectorAll('#imagens > img');
+
+            //passar por cada elemento do vetor
+            lista.forEach((item) => {
+                item.onclick = trataEvento;
+                item.onmouseover = trataEvento;
+                item.onmouseout = trataEvento;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="imagens">
+        <img id="leoa" alt="Leoa" src="https://picsum.photos/id/1074/200">
+        <img id="cachorro" alt="Cachorro" src="https://picsum.photos/id/237/200">
+        <img id="urso" alt="Urso" src="https://picsum.photos/id/433/200" />
+        <p id="selecionada"></p>
+    </div>
+</body>
+
+</html>
