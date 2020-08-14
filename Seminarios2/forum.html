@@ -1,0 +1,290 @@
+<!--Nome: Larissa Domingues Gomes
+    Matricula: 650525
+    Atividade: Portal de noticas
+    Disciplina: Desenvolvimento de Interfaces Web
+    PUC-MG  
+  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Coldplay Everyday Life Era</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="forum.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <span id="topo"></span>
+  <header class="container-max-width header">
+
+    <div class="row">
+      <div class="col-5 col-sm-7 col-md-8 col-lg-9">
+        <img src="img/l.png" class="logo">
+      </div>
+
+      <div class="col-7 col-sm-5 col-md-4 col-lg-3 float-right">
+
+        <div class="menuHeader">
+          <nav>
+            <input type="checkbox" id="menuToggle">
+
+            <!--Criar um label que controla o checkbox o for faz a ligacao entre os dois-->
+            <label for="menuToggle" class="menuIcon">
+              <!--Icone de menu-->
+              <i class="fa fa-bars"></i>
+              <i class="fa fa-times-circle"></i>
+            </label>
+
+            <nav class="nav nav-pills flex-column flex-sm-row menu">
+              <a class="flex-sm-fill text-sm-center nav-link" href="#">Inscreva-se</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="#">Registros</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="#">Log In</a>
+
+              <div class="buttonHeader">
+                País:
+                <button type="button" class="btn btn-outline-warning buttonMenu">Bra</button>
+                <button type="button buttonMenu" class="btn btn-outline-warning buttonMenu">Arg</button>
+                <button type="button buttonMenu" class="btn btn-outline-warning buttonMenu">Ger</button>
+                <button type="button buttonMenu" class="btn btn-outline-warning buttonMenu">Usa</button>
+              </div>
+            </nav>
+          </nav>
+        </div>
+
+      </div>
+
+    </div>
+
+    
+    </div>
+    <div class="navPag">
+      <a href='#topo'>Voltar ao topo</a>
+      <a href='#init'>Início da Era</a>
+      <a href='#ss'>Sunrise | Sunset</a>
+      <a href='#sing'>Singles</a>
+    </div>
+
+  </header>
+
+  <main class="container-max-width main">
+    <div class="row">
+
+      <div class="col-12">
+        <div id="carouselExampleCaptions" class="carousel slide carousel2 carousel1" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active fixedHeightImg ">
+              <img src="img/banner.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item fixedHeightImg">
+              <img src="img/coldplay2.jpg.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item fixedHeightImg">
+              <img src="img/instruments.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+
+        <div class="sobre">
+
+          <img src="img/chris.jpg" class="imgSobre" alt="...">
+          <span>"O álbum é sobre o mundo como ele realmente é, nada além disso." <br> - Chris Martin</span>
+        
+        </div>
+
+        <span id="init"></span>
+
+        <article class="inicio">
+          
+          <div class="Myalert">
+            Início da era 'Everyday Life'
+          </div>
+       
+          <p>No dia 14 de outubro de 2019, um poster misterioso da apareceu no metrô de São Paulo. Após
+            algumas horas, ele foi removido.
+          </p>
+
+          <div class="postersp">
+            <img src="img/posterSp.jpg" alt="...">
+          </div>
+
+          <div class="publicidade">
+            <img src="img/cartas.jpg" alt="...">
+            <span>Após alguns dias, o poster começou a aparecer ao redor do mundo e alguns fãs receberam cartas autografadas. E assim a publicidade da era 'Everyday Life' começou oficialmente.</span>
+          </div>    
+
+          <div class="carta">
+            <h4 class="mensagem"><i>queridos amigos<br>
+
+            minha datilografia não é muito boa, peço desculpas<br>
+
+            eu e nós esperamos que onde quer que você esteja, esteja bem. pelos últimos 100 anos ou por aí nós temos trabalhado em algo chamado Everyday Life
+
+            no anúncio você poderá escrever, ‘álbum duplo à venda, único dono bastante cuidadoso’<br>
+
+            uma metade se chama ‘sunrise’ e a outra ‘sunset’<br>
+
+            é meio que como nos sentimos em relação às coisas<br>
+
+            mandamos muito amor a vocês direto de nossa hibernação<br>
+
+            chris, jonny, guy e Will Champion<br></i></h4>
+
+          </div>
+        </article>
+        <span id="ss"></span>
+        <article class="SunRS">
+          <div class="Myalert">
+            Sunrise | Sunset
+          </div>
+
+          <div class="sunmoon">
+            <img src="img/sunmoon.png" alt="...">
+          </div>    
+
+          <div class="duplo">
+            <p >O álbum 'Everyday Life' foi dividido em duas partes, Sunrise e Sunset. A primeira conta com 
+              músicas com letras mais leves, já Sunset é feito de músicas repletas de críticas sociais. <br>
+              Para o lançamento do álbum a banda fez duas apresentações ao vivo na Jordânia, uma ao nascer do sol e outra ao pôr do sol.
+            </p>
+          </div>
+          <div class="jordan">
+            <img src="img/sunrise.png" alt="...">
+            <img src="img/sunset.png" alt="...">
+          </div>
+        </article>
+        <span id="sing"></span>
+
+        <article class="singles">
+
+          <div class="Myalert">
+            Singles
+          </div>
+
+          <button id="btn1"><strong>Trouble In Town</strong></button>
+          <button id="btn2"><strong>Daddy</strong></button>
+          <button id="btn3" ><strong>Orphans</strong></button>
+          <button id="btn4"><strong>Cry Cry Cry</strong></button>
+          <button id="btn5"><strong>Champion Of The World</strong></button>
+          <button id="btn6"><strong>Everyday Life</strong></button>
+
+          <div id="video">
+            <iframe max-width="440" max-height="250" src="https://www.youtube.com/embed/7HmiFxqdgq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <p>What in the world are we going to do?<br>
+              Look at what everybody's going through<br>
+              What kind of world do you want it to be?<br>
+              Am I the future or the history?<br></p>
+          </div>
+        </article>
+
+      </div>
+
+
+    </div>
+
+
+  </main>
+
+  <footer class="footer container-max-width">
+    <div class="row">
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <h1>Coldplay Everyday Life Era</h1>
+        <p>One Page Layout sobre a era do oitavo<br> álbum de estúdio da banda Coldplay.
+        </p>
+      </div>
+
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 Pag">
+
+        <h1>Páginas</h1>
+        <div class="row">
+
+          <div class="col-4">
+            <nav class="navFooter">
+              <a href="#">Site da banda</a>
+              <a href="#">Loja</a>
+              <a href="#">Novidades</a>
+            </nav>
+          </div>
+
+          <div class="col-4">
+            <nav class="navFooter">
+              <a href="#">Instagram</a>
+              <a href="#">Twitter</a>
+              <a href="#">Facebook</a>
+            </nav>
+          </div>
+
+          <div class="col-4">
+            <nav class="navFooter">
+              <a href="#">Promoções</a>
+              <a href="#">Vídeos</a>
+              <a href="#">Contatos</a>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+
+        <h2>Siga-nos</h2>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-facebook-square"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        Todos direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
